@@ -20,6 +20,11 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      with:
+        #projectBaseDir: ${{ github.workspace }}
+        args: >
+          -Dsonar.organization=anildevsecops
+          -Dsonar.projectKey=anildevsecops
       #with:
     # Additional arguments to the sonarcloud scanner
         #args: # optional
